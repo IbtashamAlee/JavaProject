@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <bottom>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="610.0" minWidth="425.0" prefHeight="610.0" prefWidth="425.0" style="-fx-background-color: DimGrey;">
+         <children>
+            <TextField fx:id="firstName_tf" layoutX="66.0" layoutY="69.0" prefHeight="28.0" prefWidth="290.0" promptText="First Name" style="-fx-background-color: DimGrey; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: white; -fx-text-fill: White;" stylesheets="@styles.css">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="email_tf" layoutX="65.0" layoutY="228.0" prefHeight="38.0" prefWidth="290.0" promptText="Email" style="-fx-background-color: DimGrey; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: white; -fx-text-fill: White;" stylesheets="@styles.css">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phoneNumber_tf" layoutX="65.0" layoutY="171.0" prefHeight="38.0" prefWidth="290.0" promptText="Phone" style="-fx-background-color: DimGrey; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: white; -fx-text-fill: White;" stylesheets="@styles.css">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+
+
+
+
+
+            <Pane layoutY="8.0" prefHeight="46.0" prefWidth="420.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="131.0" layoutY="3.0" lineSpacing="1.0" prefHeight="42.0" prefWidth="159.0" text="Add Contact" textFill="#ffffff82">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="save_btn" layoutX="135.0" layoutY="480.0" mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="38.0" prefWidth="151.0" style="-fx-background-color: White; -fx-font-weight: bold;" stylesheets="@styles.css" text="Save">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="lastName_tf" layoutX="65.0" layoutY="122.0" prefHeight="28.0" prefWidth="290.0" promptText="Last Name" style="-fx-background-color: DimGrey; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: white; -fx-text-fill: White;" stylesheets="@styles.css">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="dateOfBirth_dp" layoutX="86.0" layoutY="292.0" prefHeight="27.0" prefWidth="195.0" promptText="Birthday" style="-fx-background-color: Transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </DatePicker>
+            <TextField fx:id="address_tf" layoutX="66.0" layoutY="397.0" prefHeight="38.0" prefWidth="290.0" promptText="Address" style="-fx-background-color: DimGrey; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: white; -fx-text-fill: White;" stylesheets="@styles.css">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="26.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/2x/outline_person_black_18dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="23.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/2x/outline_phone_black_18dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="23.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/2x/outline_email_black_18dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="26.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/2x/outline_cake_black_18dp.png" />
+               </image>
+            </ImageView>
+            <GridPane fx:id="right" layoutX="83.0" layoutY="341.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <RadioButton fx:id="male_rb" mnemonicParsing="false" text="Male" textFill="#322f2f">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="female_rb" mnemonicParsing="false" text="Female" textFill="#322f2f" toggleGroup="$gender" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </GridPane>
+            <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="26.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/2x/outline_location_city_black_18dp.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
