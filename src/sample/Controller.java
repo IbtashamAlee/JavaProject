@@ -21,8 +21,6 @@ public class Controller {
 
 
         save_btn.setText("Saved");
-
-
         RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
         //       String gender_selected = selectedRadioButton.getText();
 //        System.out.println (gender_selected);
@@ -51,8 +49,8 @@ public class Controller {
         }catch (Exception a){
             a.getStackTrace ();
         }==================*/
-        //d1.writeToDatabase (firstName_tf.getText (),lastName_tf.getText (),dob,gender_selected,phoneN,email_tf.getText (),address_tf.getText ());
-        DataBase.writeToDatabase("Ali", "Jaan", "13-05-2000", "Male", 03217067556, "alleyjaan@gmail.com", "Kasur");
+        //DataBase.writeToDatabase (firstName_tf.getText (),lastName_tf.getText (),(String)dateOfBirth_dp.getAccessibleText(),selectedRadioButton.getText(),phoneNumber_tf.getText(),email_tf.getText (),address_tf.getText ());
+        //DataBase.writeToDatabase("Ali", "Jaan", "13-05-2000", "Male", 03217067556, "alleyjaan@gmail.com", "Kasur");
     }
 
 
