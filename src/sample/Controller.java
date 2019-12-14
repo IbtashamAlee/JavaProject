@@ -22,6 +22,7 @@ public class Controller {
 
         save_btn.setText("Saved");
         RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
+        System.out.println(dateOfBirth_dp.getValue());
         //       String gender_selected = selectedRadioButton.getText();
 //        System.out.println (gender_selected);
         //String dob= String.valueOf (dateOfBirth_dp.getValue ());

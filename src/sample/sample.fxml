@@ -31,8 +31,8 @@
                         <Font size="13.0"/>
                     </font>
                 </TextField>
-                <TextField fx:id="email_tf" layoutX="65.0" layoutY="228.0" prefHeight="28.0" prefWidth="290.0"
-                           promptText="Email"
+                <TextField fx:id="email_tf" layoutX="68.0" layoutY="123.0" prefHeight="28.0" prefWidth="290.0"
+                           promptText="Last Name"
                            style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
                            stylesheets="@styles.css">
                     <font>
@@ -59,16 +59,8 @@
                         </Label>
                     </children>
                 </Pane>
-                <Button fx:id="save_btn" layoutX="135.0" layoutY="480.0" mnemonicParsing="false"
-                        onAction="#onButtonClicked" prefHeight="38.0" prefWidth="151.0"
-                        style="-fx-background-color: #00A173; -fx-font-weight: bold;" stylesheets="@styles.css"
-                        text="Save">
-                    <font>
-                        <Font size="13.0"/>
-                    </font>
-                </Button>
-                <TextField fx:id="lastName_tf" layoutX="65.0" layoutY="122.0" prefHeight="28.0" prefWidth="290.0"
-                           promptText="Last Name"
+                <TextField fx:id="lastName_tf" layoutX="65.0" layoutY="233.0" prefHeight="28.0" prefWidth="290.0"
+                           promptText="Email"
                            style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
                            stylesheets="@styles.css">
                     <font>
@@ -141,6 +133,14 @@
                         </RadioButton>
                     </children>
                 </GridPane>
+                <Button fx:id="save_btn" layoutX="135.0" layoutY="480.0" mnemonicParsing="false"
+                        onAction="#onButtonClicked" prefHeight="38.0" prefWidth="151.0"
+                        style="-fx-background-color: #00A173; -fx-font-weight: bold;" stylesheets="@styles.css"
+                        text="Save">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
                 <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="26.0" layoutY="402.0" pickOnBounds="true"
                            preserveRatio="true">
                     <image>
