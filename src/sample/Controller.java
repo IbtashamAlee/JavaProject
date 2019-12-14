@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class Controller {
     @FXML
@@ -23,6 +24,11 @@ public class Controller {
         save_btn.setText("Saved");
         RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
         System.out.println(dateOfBirth_dp.getValue());
+        String dob = String.valueOf(dateOfBirth_dp.getValue());
+        System.out.println(dob);
+        LocalDate dob1 = LocalDate.parse(dob);
+        System.out.println(dob1);
+        dateOfBirth_dp.setValue(dob1);
         //       String gender_selected = selectedRadioButton.getText();
 //        System.out.println (gender_selected);
         //String dob= String.valueOf (dateOfBirth_dp.getValue ());
@@ -50,8 +56,9 @@ public class Controller {
         }catch (Exception a){
             a.getStackTrace ();
         }==================*/
-        //DataBase.writeToDatabase (firstName_tf.getText (),lastName_tf.getText (),(String)dateOfBirth_dp.getAccessibleText(),selectedRadioButton.getText(),phoneNumber_tf.getText(),email_tf.getText (),address_tf.getText ());
+        DataBase.writeToDatabase(firstName_tf.getText(), lastName_tf.getText(), dob, selectedRadioButton.getText(), phoneNumber_tf.getText(), email_tf.getText(), address_tf.getText());
         //DataBase.writeToDatabase("Ali", "Jaan", "13-05-2000", "Male", 03217067556, "alleyjaan@gmail.com", "Kasur");
+        Controller2.stage.close();
     }
 
 

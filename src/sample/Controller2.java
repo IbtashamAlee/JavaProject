@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller2 implements Initializable {
-    Stage stage = new Stage();
+    static Stage stage = new Stage();
     Std s1 = new Std("qeqweq", "123123");
     ObservableList list = FXCollections.observableArrayList(
             s1, new Std("Ali", "1312313")
