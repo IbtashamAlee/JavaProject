@@ -1,9 +1,7 @@
 package sample;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class DataBase {
     public static final String database = ("jdbc:sqlite:C:\\Users\\Ibtasham Alee\\Desktop\\Project\\Contacts.db");
@@ -41,19 +39,36 @@ public class DataBase {
 //            System.out.println ("Something went Wrong "+e.getMessage ());
         }
     }
-}
-   /* public ArrayList<Std> readFromDataBase() throws SQLException {
-        ArrayList arrlist;
-        ResultSet results = stat.getResultSet ();
+
+    public static void readFromDataBase() throws SQLException {
+        ArrayList<Std> s1 = new ArrayList<>();
+        String name, number;
+        String sql = "SELECT firstName, lastName, phoneNumber FROM Contacts";
+
+        try (
+                ResultSet rs = stat.executeQuery(sql)) {
+
+            // loop through the result set
+            while (rs.next()) {
+                System.out.println(rs.getString("firstName") + "\t" +
+                        rs.getString("lastName") + "\t" +
+                        rs.getString("phoneNumber"));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+/*        ResultSet results = stat.getResultSet ();
             while (results.next ()) {
-                System.out.println (results.getString ("firstName") + " " +
-                        results.getString ("lastName") + " " +
-                        results.getInt ("phoneNumber"));
-                arrlist.add();
+                name=results.getString("firstName") + " " +
+                        results.getString ("lastName");
+                        number=results.getString ("phoneNumber");
+
+                System.out.println("Name ="+name+" Phone= "+number);
             }
 
             results.close ();
+            stat.close();*/
 
-        return arrlist;
+
     }
-}*/

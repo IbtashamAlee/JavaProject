@@ -12,17 +12,7 @@
    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10,0,0,0);
  }
 
-.table-view .column-header,
-.table-view .column-header .filler,
-.table-view .column-header-background .filler {
-    -fx-background-color:  #00A173;
-    -fx-stroke: transparent;
-    -fx-size:50;
-    -fx-alignment: CENTER ;
-    -fx-text-alignment: center;
-    -fx-font-size: 15;
 
-}
 .table-row-cell:filled:hover {
 
     -fx-size:50;
@@ -41,7 +31,19 @@
 }
 
 .table-view .table-column{
+    -fx-background-color:  #212121;
+    -fx-text-fill: white;
     -fx-text-alignment: center;
     -fx-alignment: CENTER
+}
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color:  #00A173;
+    -fx-stroke: transparent;
+    -fx-size:50;
+    -fx-alignment: CENTER ;
+    -fx-text-alignment: center;
+    -fx-font-size: 15;
 
 }

@@ -14,9 +14,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
-
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Controller2 implements Initializable {
@@ -49,7 +49,7 @@ public class Controller2 implements Initializable {
     }
 
     @FXML
-    public void addContact(ActionEvent e) throws IOException {
+    public void addContact(ActionEvent e) throws IOException, SQLException {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Sample.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -68,6 +68,7 @@ public class Controller2 implements Initializable {
         } catch (Exception a) {
             a.getStackTrace();
         }
+        DataBase.readFromDataBase();
 
 
     }

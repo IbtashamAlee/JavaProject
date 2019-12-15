@@ -57,7 +57,6 @@ public class Controller {
             a.getStackTrace ();
         }==================*/
         DataBase.writeToDatabase(firstName_tf.getText(), lastName_tf.getText(), dob, selectedRadioButton.getText(), phoneNumber_tf.getText(), email_tf.getText(), address_tf.getText());
-        //DataBase.writeToDatabase("Ali", "Jaan", "13-05-2000", "Male", 03217067556, "alleyjaan@gmail.com", "Kasur");
         Controller2.stage.close();
     }
 

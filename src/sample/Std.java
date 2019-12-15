@@ -7,6 +7,7 @@ public class Std {
     SimpleStringProperty name;
     SimpleStringProperty C2;
 
+
     public Std(String name, String C2) {
         this.name = new SimpleStringProperty(name);
         this.C2 = new SimpleStringProperty(C2);
@@ -26,5 +27,17 @@ public class Std {
 
     public StringProperty C2Property() {
         return C2;
+    }
+
+    public void setName(String name) {
+        this.name.set(name);
+    }
+
+    public SimpleStringProperty c2Property() {
+        return C2;
+    }
+
+    public void setC2(String c2) {
+        this.C2.set(c2);
     }
 }

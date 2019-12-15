@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="668.0" style="-fx-background-color: #212121;"
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="1080.0" style="-fx-background-color: #212121;"
       xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="sample.Controller2">
     <children>
         <BorderPane VBox.vgrow="ALWAYS">
@@ -25,7 +25,7 @@
                 <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0"
                             style="-fx-background-color: #212121;">
                     <children>
-                        <SplitPane dividerPositions="0.4231974921630094" layoutX="-1.0" layoutY="2.0" prefHeight="400.0"
+                        <SplitPane dividerPositions="0.5" layoutX="-1.0" layoutY="2.0" prefHeight="400.0"
                                    prefWidth="640.0" style="-fx-background-color: #212121;"
                                    AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0"
                                    AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
@@ -33,7 +33,7 @@
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                     <children>
                                         <TableView fx:id="tbl" layoutY="44.0" prefHeight="455.0" prefWidth="267.0"
-                                                   stylesheets="@styles.css" AnchorPane.bottomAnchor="1.0"
+                                                   stylesheets="@TableView.css" AnchorPane.bottomAnchor="1.0"
                                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
                                                    AnchorPane.topAnchor="44.0">
                                             <columns>
@@ -117,9 +117,9 @@
                                                     </rowConstraints>
                                                     <children>
                                                         <TextField maxHeight="-Infinity" maxWidth="252.0"
-                                                                   style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;">
+                                                                   style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #616161; -fx-text-fill: #9AA0A6; -fx-font-family: tahoma;">
                                                             <font>
-                                                                <Font name="Arial" size="16.0"/>
+                                                                <Font name="Tahoma" size="16.0"/>
                                                             </font>
                                                         </TextField>
                                                         <TextField maxHeight="-Infinity" maxWidth="252.0"
