@@ -21,19 +21,19 @@
             fx:controller="sample.Controller">
     <bottom>
         <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="610.0" minWidth="425.0"
-              prefHeight="610.0" prefWidth="425.0" style="-fx-background-color: #212121;">
+              prefHeight="610.0" prefWidth="425.0" style="-fx-background-color: #2A2E37;">
             <children>
                 <TextField fx:id="firstName_tf" layoutX="66.0" layoutY="69.0" prefHeight="28.0" prefWidth="290.0"
                            promptText="First Name"
-                           style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
+                           style="-fx-background-color: #2A2E37; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
                            stylesheets="@styles.css">
                     <font>
                         <Font size="13.0"/>
                     </font>
                 </TextField>
-                <TextField fx:id="email_tf" layoutX="68.0" layoutY="123.0" prefHeight="28.0" prefWidth="290.0"
+                <TextField fx:id="lastName_tf" layoutX="68.0" layoutY="123.0" prefHeight="28.0" prefWidth="290.0"
                            promptText="Last Name"
-                           style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
+                           style="-fx-background-color: #2A2E37; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
                            stylesheets="@styles.css">
                     <font>
                         <Font size="13.0"/>
@@ -41,7 +41,7 @@
                 </TextField>
                 <TextField fx:id="phoneNumber_tf" layoutX="65.0" layoutY="171.0" prefHeight="28.0" prefWidth="290.0"
                            promptText="Phone"
-                           style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
+                           style="-fx-background-color: #2A2E37; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
                            stylesheets="@styles.css">
                     <font>
                         <Font size="13.0"/>
@@ -59,9 +59,9 @@
                         </Label>
                     </children>
                 </Pane>
-                <TextField fx:id="lastName_tf" layoutX="65.0" layoutY="233.0" prefHeight="28.0" prefWidth="290.0"
+                <TextField fx:id="email_tf" layoutX="65.0" layoutY="233.0" prefHeight="28.0" prefWidth="290.0"
                            promptText="Email"
-                           style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
+                           style="-fx-background-color: #2A2E37; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
                            stylesheets="@styles.css">
                     <font>
                         <Font size="13.0"/>
@@ -78,7 +78,7 @@
                 </DatePicker>
                 <TextField fx:id="address_tf" layoutX="65.0" layoutY="397.0" prefHeight="28.0" prefWidth="290.0"
                            promptText="Address"
-                           style="-fx-background-color: #212121; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
+                           style="-fx-background-color: #2A2E37; -fx-border-width: 0px 0px 2px 0px; -fx-font-family: tahoma; -fx-border-color: #616161; -fx-text-fill: #9AA0A6;"
                            stylesheets="@styles.css">
                     <font>
                         <Font size="13.0"/>
@@ -135,8 +135,8 @@
                 </GridPane>
                 <Button fx:id="save_btn" layoutX="135.0" layoutY="480.0" mnemonicParsing="false"
                         onAction="#onButtonClicked" prefHeight="38.0" prefWidth="151.0"
-                        style="-fx-background-color: #00A173; -fx-font-weight: bold;" stylesheets="@styles.css"
-                        text="Save">
+                        style="-fx-background-color: #30839f; -fx-font-weight: bold;" stylesheets="@styles.css"
+                        text="Save" textFill="WHITE">
                     <font>
                         <Font size="13.0"/>
                     </font>

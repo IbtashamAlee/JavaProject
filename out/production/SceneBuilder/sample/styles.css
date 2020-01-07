@@ -1,26 +1,18 @@
+.text-field {
+   -fx-text-fill : #fff;
+}
 
-.text-field
-{
-	-fx-text-fill : #fff;
-}
-.label
-{
-    
-}
 .button:hover {
--fx-padding: 10px;
+   -fx-padding: 10px;
    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10,0,0,0);
- }
-
+}
 
 .table-row-cell:filled:hover {
-
-    -fx-size:50;
-    -fx-alignment: CENTER;
-    -fx-text-alignment: center;
-
-
+   -fx-size:50;
+   -fx-alignment: CENTER;
+   -fx-text-alignment: center;
 }
+
 .table-view:row-selection {
     -fx-background-color:  #212121;
     -fx-text-fill: white;

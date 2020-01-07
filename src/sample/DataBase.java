@@ -1,6 +1,7 @@
 package sample;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class DataBase {
@@ -26,49 +27,54 @@ public class DataBase {
                     firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
 
             stat.execute(query);
-//            ResultSet results = stat.getResultSet ();
-//            while (results.next ()) {
-//                System.out.println (results.getString ("name") + " " +
-//                        results.getInt ("phone") + " " +
-//                        results.getString ("email"));
-//            }
-//
-//            results.close ();
         } catch (SQLException e) {
             e.printStackTrace();
-//            System.out.println ("Something went Wrong "+e.getMessage ());
         }
     }
 
-    public static void readFromDataBase() throws SQLException {
-        ArrayList<Std> s1 = new ArrayList<>();
+    public static ArrayList<SetValues_TableView> readFromDataBase() throws SQLException {
+        ArrayList<SetValues_TableView> s1 = new ArrayList<>();
         String name, number;
-        String sql = "SELECT firstName, lastName, phoneNumber FROM Contacts";
+        String sql = "SELECT firstName, lastName, phoneNumber FROM Contacts;";
 
         try (
-                ResultSet rs = stat.executeQuery(sql)) {
+                Connection conn1 = DriverManager.getConnection(database);
+                Statement stat1 = conn1.createStatement();
+                ResultSet rs = stat1.executeQuery(sql)) {
 
             // loop through the result set
             while (rs.next()) {
-                System.out.println(rs.getString("firstName") + "\t" +
-                        rs.getString("lastName") + "\t" +
-                        rs.getString("phoneNumber"));
+                name = rs.getString("firstName") + " " +
+                        rs.getString("lastName");
+                number = rs.getString("phoneNumber");
+                s1.add(new SetValues_TableView(name, number));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+        System.out.println(s1);
+        return s1;
     }
-/*        ResultSet results = stat.getResultSet ();
-            while (results.next ()) {
-                name=results.getString("firstName") + " " +
-                        results.getString ("lastName");
-                        number=results.getString ("phoneNumber");
 
-                System.out.println("Name ="+name+" Phone= "+number);
-            }
+    public static void updateData(String phoneNumber) {
+        String sql = String.format("Select * from Contacts Where phoneNumber = %s;", phoneNumber);
+        try {
+            Connection conn1 = DriverManager.getConnection(database);
+            Statement stat1 = conn1.createStatement();
+            ResultSet rs = stat1.executeQuery(sql);
+            rs.next();
+            AddContacts a = new AddContacts();
+            a.setFirstName(rs.getString("firstName"));
+            a.setLastName(rs.getString("lastName"));
+            a.setPhoneNumber(rs.getString("phoneNumber"));
+            a.setEmail(rs.getString("email"));
+            a.setDateOFBirth(LocalDate.parse((String) (rs.getString("dateOfBirth"))));
+            a.setAddress(rs.getString("address"));
+            //System.out.println("hi"+rs.getString("address"));
 
-            results.close ();
-            stat.close();*/
-
-
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
+
+}

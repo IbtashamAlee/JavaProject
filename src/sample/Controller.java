@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.io.IOException;
-import java.time.LocalDate;
 
 public class Controller {
     @FXML
@@ -17,45 +16,23 @@ public class Controller {
     @FXML
     private Button save_btn;
 
+    public TextField getPhoneNumber_tf() {
+        return phoneNumber_tf;
+    }
+
     @FXML
     public void onButtonClicked(ActionEvent e) throws IOException {
-
-
+        save_btn.setText("Saved");
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e1) {
+            e1.printStackTrace();
+        }
         save_btn.setText("Saved");
         RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
         System.out.println(dateOfBirth_dp.getValue());
         String dob = String.valueOf(dateOfBirth_dp.getValue());
-        System.out.println(dob);
-        LocalDate dob1 = LocalDate.parse(dob);
-        System.out.println(dob1);
-        dateOfBirth_dp.setValue(dob1);
-        //       String gender_selected = selectedRadioButton.getText();
-//        System.out.println (gender_selected);
-        //String dob= String.valueOf (dateOfBirth_dp.getValue ());
-        //int phoneN= Integer.parseInt (phoneNumber_tf.getText ());
-        //System.out.println (phoneN);
-        //System.out.println (phoneNumber_tf.getText ());
 
-        /*try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DisplayContacts.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-//without titlebar
-//            try {
-//                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Demo.fxml"));
-//                Parent root1 = (Parent) fxmlLoader.load();
-//                Stage stage = new Stage();
-//                stage.initModality(Modality.APPLICATION_MODAL);
-//                stage.initStyle(StageStyle.UNDECORATED);
-//                stage.setTitle("ABC");
-//                stage.setScene(new Scene(root1));
-//                stage.show();
-//            }
-        }catch (Exception a){
-            a.getStackTrace ();
-        }==================*/
         DataBase.writeToDatabase(firstName_tf.getText(), lastName_tf.getText(), dob, selectedRadioButton.getText(), phoneNumber_tf.getText(), email_tf.getText(), address_tf.getText());
         Controller2.stage.close();
     }

@@ -1,13 +1,11 @@
 package sample;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class AddContacts {
-    Date dateOFBirth;
-    private String firstName, lastName, email, address;
-    private String male = "Male";
-    private String female = "Female";
-    private int phoneNumber;
+    private static String firstName, lastName, email, address;
+    private static String phoneNumber;
+    LocalDate dateOFBirth;
 
     public String getFirstName() {
         return firstName;
@@ -41,19 +39,19 @@ public class AddContacts {
         this.address = address;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public Date getDateOFBirth() {
+    public LocalDate getDateOFBirth() {
         return dateOFBirth;
     }
 
-    public void setDateOFBirth(Date dateOFBirth) {
+    public void setDateOFBirth(LocalDate dateOFBirth) {
         this.dateOFBirth = dateOFBirth;
     }
 }

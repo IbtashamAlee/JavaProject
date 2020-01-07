@@ -1,11 +1,7 @@
-/*
-    Created on : 11 Nov, 2017, 4:42:53 AM
-    Author     : afsal villan
-*/
-
+//Coloring
 * {
     -fx-primary : #2A2E37;
-    -fx-secondary : #00A173;
+    -fx-secondary :#30839f;
     -fx-primarytext : #B2B2B2;
     -fx-blue: #1976D2;
     -fx-red: #FF0000;
@@ -44,7 +40,7 @@
     -fx-text-fill: derive(-fx-secondary, 20%);
 }
 
-/*Login Screen Specific*/
+//Login Screen Specific
 
 
 .wrong-credentials
@@ -53,9 +49,9 @@
     -jfx-focus-color: #ef5350;
 }
 
-/*Main Screen CSS Styling starts here*/
+//Main Screen CSS Styling starts here
 
-/*TablPane styling*/
+//TablPane styling
 .tab{
     -fx-background-color: -fx-primary;
 }
